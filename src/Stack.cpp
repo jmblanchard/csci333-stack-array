@@ -18,7 +18,8 @@ void Stack::push(int value) {
   // delete old stack
   // point old stack pointer to new stack
   if (top == maxSize) {
-    int *newStack = new int[maxSize*2];
+    maxSize *= 2;
+    int *newStack = new int[maxSize];
     for (int i = 0; i < top; ++i) {
       newStack[i] = theStack[i];
     }
