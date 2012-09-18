@@ -16,6 +16,6 @@ TEST(StackTest, Resize) {
         s->push(i);
     }
 
-    EXPECT_EQ(12, s->size());
+    EXPECT_EQ(11, s->peek());
     delete s;
 }

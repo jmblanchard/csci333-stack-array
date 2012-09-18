@@ -1,5 +1,6 @@
 #include "Stack.h"
 #include <iostream>
+#include <assert.h>
 
 Stack::Stack(int initialSize) {
   theStack = new int[initialSize];
@@ -27,6 +28,8 @@ void Stack::push(int value) {
     theStack = newStack;
     newStack = NULL;
   }
+
+  assert(top != maxSize);
   theStack[top] = value;
   top++;
 }
